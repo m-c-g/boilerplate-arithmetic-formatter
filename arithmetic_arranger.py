@@ -1,18 +1,16 @@
 import re
-import sys
 from functools import reduce
 
 ########################################################
 def arithmetic_arranger(problems, ANSWERS = False):
 
-    # Transpose the rows of problems into columns of their farts
+    # Transpose the rows of problems into columns of their parts
     parsed_probs = parse(problems)
 
     # Validate before we eval to provide answers if needed.
     try:
         validate(parsed_probs)
     except ValueError as err:
-#        print(str(err))
         return str(err)
 
     # Append the answer string 
